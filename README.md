@@ -50,47 +50,6 @@
 - Open `app/src/main/java/com/moondark/realfoodapp/RealFoodApp.kt`
 - Replace: MapKitFactory.setApiKey("YOUR_API_KEY_HERE")
 
-
-### 📂 Project Structure
-RealFoodApp/
-├── app/
-│ ├── src/
-│ │ └── main/
-│ │ ├── java/com/moondark/realfoodapp/
-│ │ │ ├── MainActivity.kt
-│ │ │ ├── MainMenuActivity.kt
-│ │ │ ├── CartActivity.kt
-│ │ │ ├── SettingsActivity.kt
-│ │ │ ├── AdminActivity.kt
-│ │ │ ├── TrackingActivity.kt
-│ │ │ ├── ProductAdapter.kt
-│ │ │ ├── CartItemAdapter.kt
-│ │ │ ├── AdminProductAdapter.kt
-│ │ │ ├── CurrencyManager.kt
-│ │ │ ├── NetworkUtils.kt
-│ │ │ ├── RetrofitClient.kt
-│ │ │ ├── ExchangeRateService.kt
-│ │ │ ├── ExchangeRateResponse.kt
-│ │ │ └── database/
-│ │ │ ├── AppDatabase.kt
-│ │ │ ├── ProductEntity.kt
-│ │ │ ├── ProductDao.kt
-│ │ │ ├── CartItemEntity.kt
-│ │ │ ├── CartDao.kt
-│ │ │ ├── OrderEntity.kt
-│ │ │ └── OrderDao.kt
-│ │ ├── res/
-│ │ │ ├── layout/
-│ │ │ ├── values/
-│ │ │ └── drawable/
-│ │ └── AndroidManifest.xml
-│ └── build.gradle.kts
-├── gradle/
-├── .gitignore
-├── README.md
-└── build.gradle.kts
-
-
 ### 🚀 Getting Started
 
 #### Prerequisites
@@ -168,6 +127,12 @@ Edit `SettingsActivity.kt` line ~48:
 ### 📱 Screenshots
 
 > Add screenshots here
+> ![InterfazPrincipal.png](img_1.png)
+> ![InterfazDePago.png](img_2.png)
+> ![InterfazConfiguracionUsuraio.png](img_3.png)
+> ![InterfazAdmin.png](img_4.png)
+> ![ImagenCambioExchange.png](img.png)
+> ![InterfazEntregaPedido.png](img_5.png)
 
 ### 🧪 Testing
 
