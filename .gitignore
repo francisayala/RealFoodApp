@@ -1,0 +1,90 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Keystore files (NEVER commit these!)
+*.jks
+*.keystore
+keystore.properties
+
+# API Keys (if you have a separate config file)
+secrets.properties
+api_keys.xml
+
+# IntelliJ IDEA
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/deploymentTargetDropDown.xml
+.idea/render.experimental.xml
+.idea/navEditor.xml
+.idea/caches
+.idea/modules.xml
+
+# Kotlin
+.kotlin/
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Version control
+.svn/
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*~
+*.swp
+*.bak
+
+# NDK
+obj/
+
+# Android Profiling
+*.hprof

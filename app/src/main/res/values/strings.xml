@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RealFoodApp</string>
+    <string name="buscar_platos_o_restaurantes" translatable="false">Buscar platos o restaurantes</string>
+    <string name="total_0" translatable="false">r=Total: $0.00</string>
+
+
+    <!-- Opcionales para la pantalla del carrito -->
+    <string name="tu_carrito" translatable="false">Tu carrito</string>
+    <string name="pagar" translatable="false">Pagar</string>
+</resources>

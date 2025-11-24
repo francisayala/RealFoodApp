@@ -1,0 +1,340 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292E3C"
+    android:padding="16dp"
+    tools:context=".SettingsActivity">
+
+    <!-- Título Profile -->
+    <TextView
+        android:id="@+id/productsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView para hacer scroll si hay muchos campos -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/productsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adminButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card para Nombre -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Name"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card para Fecha de Nacimiento -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/birthdayInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Date birthday"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:inputType="date"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card para Correo Electrónico -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Email Address"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card para Teléfono -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Phone number"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:inputType="phone"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SEPARADOR -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="#5A6070"/>
+
+            <!-- Título de Ubicación -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍Direccion del Pedido"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Card para Dirección/Calle -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/addressInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Street Address (e.g., Lenina St, 123)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:inputType="textPostalAddress"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card para Ciudad -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/cityInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="City (e.g., Krasnoyarsk)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#A0A0A0"
+                    android:inputType="text"
+                    android:padding="16dp"/>
+            </androidx.cardview.widget.CardView>
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="#5A6070"/>
+
+            <!-- Título Preferencias -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Preferencias"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Card para Selector de Moneda -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#4A5060"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💱 Moneda"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/currencyButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#673AB7"
+                        android:minWidth="100dp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Mensaje informativo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="💡 Los precios se mostrarán en la moneda seleccionada"
+                android:textColor="#A0A0A0"
+                android:textSize="12sp"/>
+
+
+            <!-- Mensaje de ayuda -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="💡Tu ubicacion se convertira en coordenadas automaticamente"
+                android:textColor="#A0A0A0"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Admin (CORREGIDO - ahora está fuera del ScrollView) -->
+    <Button
+        android:id="@+id/adminButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🔧 Modo Administrador"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:backgroundTint="#FF9800"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón SAVE -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:textAllCaps="false"
+        android:backgroundTint="#673AB7"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/adminButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation" />
+
+    <!-- Barra de Navegación Inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_add"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
