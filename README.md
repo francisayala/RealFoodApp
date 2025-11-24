@@ -126,12 +126,17 @@ Edit `SettingsActivity.kt` line ~48:
 
 ### 📱 Screenshots
 
-> Add screenshots here
+
 > ![InterfazPrincipal.png](img_1.png)
+
 > ![InterfazDePago.png](img_2.png)
+
 > ![InterfazConfiguracionUsuraio.png](img_3.png)
+
 > ![InterfazAdmin.png](img_4.png)
+
 > ![ImagenCambioExchange.png](img.png)
+
 > ![InterfazEntregaPedido.png](img_5.png)
 
 ### 🧪 Testing
