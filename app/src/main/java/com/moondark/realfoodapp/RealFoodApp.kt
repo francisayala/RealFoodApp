@@ -8,7 +8,7 @@ class RealFoodApp : Application() {
         super.onCreate()
 
         // Aquí irá tu API Key de Yandex
-        MapKitFactory.setApiKey("TU_API_VA_AQUI")
+        MapKitFactory.setApiKey("261267cf-290a-46d9-bacc-88d13a928af3")
 
         // Opcional: establecer idioma español
         MapKitFactory.setLocale("es_ES")

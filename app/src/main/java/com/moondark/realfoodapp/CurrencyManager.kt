@@ -11,7 +11,7 @@ class CurrencyManager(private val context: Context) {
     private val sharedPreferences = context.getSharedPreferences("CurrencyPrefs", Context.MODE_PRIVATE)
 
     // ← IMPORTANTE: Pega aquí tu API Key de ExchangeRate-API
-    private val API_KEY = "TU_API_AQUI"
+    private val API_KEY = "44926e72e44d936600f0fe64"
 
     // Monedas soportadas
     val availableCurrencies = listOf(
@@ -86,7 +86,7 @@ class CurrencyManager(private val context: Context) {
             }
 
             // 2. Validar API Key
-            if (API_KEY.isEmpty() || API_KEY == "TU_API_KEY_AQUI") {
+            if (API_KEY.isEmpty() || API_KEY == "44926e72e44d936600f0fe64") {
                 Log.e("CURRENCY", "❌ API Key no configurada")
                 return Result.failure(Exception("API Key no configurada"))
             }

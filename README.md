@@ -41,8 +41,15 @@
 - **JSON**: Gson 2.9.0
 - **Architecture**: MVVM pattern
 
-#### APIs
+### Configure API Key (Optional - for currency conversion)
 - **Currency Exchange**: ExchangeRate-API (free tier)
+- Get free API for exchanges key from [ExchangeRate-API](https://www.exchangerate-api.com/) 
+- Open `app/src/main/java/com/moondark/realfoodapp/CurrencyManager.kt`
+- Replace: private val API_KEY = "YOUR_API_KEY_HERE"
+- Get free API for MapKit Yandex [MapKit-API](https://developer.tech.yandex.ru/services/)
+- Open `app/src/main/java/com/moondark/realfoodapp/RealFoodApp.kt`
+- Replace: MapKitFactory.setApiKey("YOUR_API_KEY_HERE")
+
 
 ### 📂 Project Structure
 RealFoodApp/
